@@ -1,0 +1,24 @@
+grpc:
+  server:
+    port: 8041
+    reflection-service-enabled: true
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5468/grpc_study
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+  flyway:
+    enabled: true
+    table: flyway_schema_grpc_study
+    locations: classpath:/sql
+    baseline-on-migrate: true
+    url: jdbc:postgresql://localhost:5468/grpc_study
+    user: postgres
+    password: postgres
